@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hot Sale 2026 · 99 minutos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&family=Barlow+Condensed:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --ink-2:#1a1a1a;
+    --paper:#ffffff;
+    --gray-50:#fafafa;
+    --gray-100:#f4f4f4;
+    --gray-200:#e8e8e8;
+    --gray-300:#d4d4d4;
+    --gray-400:#a3a3a3;
+    --gray-500:#737373;
+    --gray-600:#525252;
+    --gray-700:#404040;
+    --gray-800:#262626;
+    --accent:#85c440;
+    --accent-deep:#6ba32f;
+    --accent-soft:rgba(133,196,64,.12);
+    --warn:#f5c518;
+    --warn-deep:#a97f00;
+    --warn-soft:rgba(245,197,24,.18);
+    --line:#e8e8e8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Barlow',sans-serif;
+    font-size:15px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    font-weight:400;
+  }
+
+  /* TOP BAR */
+  .topbar{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--paper);border-bottom:1px solid #000}
+  .topbar-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 40px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+  .topbar-left{display:flex;gap:32px;align-items:center}
+  .topbar-brand{font-family:'Barlow',sans-serif;font-weight:700;font-size:14px;letter-spacing:0;text-transform:none;display:flex;align-items:center;gap:10px}
+  .topbar-brand .dot{width:8px;height:8px;background:var(--accent);border-radius:50%}
+  .topbar-right{display:flex;gap:24px;color:var(--gray-400)}
+  .topbar a{color:inherit;text-decoration:none;transition:color .2s}
+  .topbar a:hover{color:var(--accent)}
+
+  /* HERO */
+  .hero{position:relative;max-width:1400px;margin:0 auto;padding:80px 40px 50px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:end}
+  .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent-deep);font-weight:600;margin-bottom:28px;display:flex;gap:14px;align-items:center}
+  .hero-eyebrow .pip{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(133,196,64,.5)}100%{box-shadow:0 0 0 12px rgba(133,196,64,0)}}
+  .hero h1{font-family:'Barlow',sans-serif;font-weight:300;font-size:clamp(56px,7.5vw,112px);line-height:.95;letter-spacing:-.035em;color:var(--ink)}
+  .hero h1 strong{font-weight:700}
+  .hero h1 .hl{position:relative;display:inline-block}
+  .hero h1 .hl::after{content:"";position:absolute;left:-4px;right:-4px;bottom:6px;height:18px;background:var(--accent);z-index:-1;transform:skewX(-6deg)}
+  .hero-meta{display:flex;flex-direction:column;gap:0;padding-bottom:14px}
+  .hero-meta-row{display:grid;grid-template-columns:130px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid var(--line);font-size:13px}
+  .hero-meta-row:last-child{border-bottom:1px solid var(--line)}
+  .hero-meta-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-500);font-weight:500}
+  .hero-meta-value{font-family:'Barlow',sans-serif;font-weight:500;font-size:18px}
+  .hero-meta-value strong{color:var(--ink);font-weight:700}
+  .hero-meta-value .accent-text{color:var(--accent-deep);font-weight:600}
+
+  /* COUNTDOWN special styling */
+  .countdown-row{align-items:center !important}
+  .countdown-value{display:flex;align-items:baseline;gap:10px}
+  .countdown-num{
+    font-family:'Barlow',sans-serif;font-weight:700;
+    font-size:42px;line-height:1;color:var(--accent-deep);
+    letter-spacing:-.03em;
+  }
+  .countdown-label{
+    font-family:'Barlow Condensed',sans-serif;font-size:13px;
+    font-weight:500;color:var(--gray-600);
+    text-transform:uppercase;letter-spacing:.1em;
+  }
+
+  /* KPI STRIP - 3 columns now */
+  .kpi-strip{max-width:1400px;margin:0 auto;padding:50px 40px;display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);background:var(--gray-50)}
+  .kpi{padding:0 32px;border-left:1px solid var(--line);position:relative}
+  .kpi:first-child{border-left:none;padding-left:0}
+  .kpi-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-500);margin-bottom:16px;font-weight:500}
+  .kpi-value{font-family:'Barlow',sans-serif;font-weight:300;font-size:58px;line-height:1;letter-spacing:-.03em;color:var(--ink)}
+  .kpi-unit{font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;color:var(--gray-500);margin-left:6px}
+  .kpi-delta{margin-top:12px;font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--gray-600);font-weight:500;display:flex;align-items:center;gap:8px}
+  .kpi-delta .badge{background:var(--accent-soft);color:var(--accent-deep);padding:2px 8px;font-weight:600;font-size:11px;letter-spacing:.05em}
+
+  /* SECTION */
+  section{max-width:1400px;margin:0 auto;padding:90px 40px;border-bottom:1px solid var(--line);position:relative}
+  .section-head{display:grid;grid-template-columns:200px 1fr;gap:40px;margin-bottom:60px;align-items:start}
+  .section-num{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gray-500);font-weight:500;border-top:2px solid var(--ink);padding-top:14px}
+  .section-num strong{display:block;font-family:'Barlow',sans-serif;font-weight:200;font-size:48px;color:var(--ink);letter-spacing:-.03em;margin-top:8px;line-height:1}
+  .section-title{font-family:'Barlow',sans-serif;font-weight:300;font-size:clamp(34px,4.2vw,58px);line-height:1;letter-spacing:-.03em}
+  .section-title strong{font-weight:700}
+  .section-title .hl-thin{border-bottom:4px solid var(--accent);padding-bottom:2px}
+  .section-lede{font-family:'Barlow',sans-serif;font-weight:400;font-size:19px;line-height:1.5;color:var(--gray-600);margin-top:22px;max-width:720px}
+  .section-lede strong{color:var(--ink);font-weight:600}
+
+  /* FORECAST */
+  .forecast-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:40px}
+  .chart-card{background:var(--gray-50);border:1px solid var(--line);padding:36px;position:relative}
+  .chart-card::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:3px;background:var(--accent)}
+  .chart-card-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
+  .chart-card h3{font-family:'Barlow',sans-serif;font-weight:600;font-size:22px;letter-spacing:-.01em}
+  .chart-card-sub{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-500);margin-top:6px}
+  .chart-legend{display:flex;gap:18px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-600)}
+  .chart-legend span{display:flex;align-items:center;gap:6px}
+  .chart-legend i{display:inline-block;width:10px;height:10px;border-radius:50%}
+  .chart-legend i.frame{border-radius:0;border:2px solid var(--accent);background:transparent}
+  .chart-wrap{height:340px;position:relative}
+  .forecast-stats{display:flex;flex-direction:column;gap:0}
+  .stat-row{border-bottom:1px solid var(--line);padding:24px 0;display:grid;grid-template-columns:1fr auto;align-items:end;gap:20px}
+  .stat-row:first-child{border-top:1px solid var(--line)}
+  .stat-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-500);font-weight:500}
+  .stat-detail{font-family:'Barlow',sans-serif;font-weight:400;color:var(--gray-600);font-size:14px;margin-top:4px}
+  .stat-num{font-family:'Barlow',sans-serif;font-weight:300;font-size:44px;line-height:1;letter-spacing:-.025em}
+  .stat-num.accent{color:var(--accent-deep)}
+  .stat-num.dark{color:var(--ink)}
+  .stat-num small{font-size:18px;color:var(--gray-500);font-weight:400;margin-left:4px}
+  .peak-banner{margin-top:40px;padding:32px 36px;background:var(--ink);color:var(--paper);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:36px;position:relative;overflow:hidden}
+  .peak-banner::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:var(--accent)}
+  .peak-banner-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--accent)}
+  .peak-banner-text{font-family:'Barlow',sans-serif;font-weight:400;font-size:20px;line-height:1.45}
+  .peak-banner-text strong{color:var(--accent);font-weight:700}
+  .peak-banner-num{font-family:'Barlow',sans-serif;font-weight:200;font-size:64px;line-height:1;color:var(--paper);letter-spacing:-.03em}
+
+  /* GROWTH */
+  .growth-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .growth-table{width:100%;border-collapse:collapse;font-family:'Barlow',sans-serif}
+  .growth-table th{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-500);font-weight:600;text-align:left;padding:14px 12px;border-bottom:2px solid var(--ink)}
+  .growth-table th.num{text-align:right}
+  .growth-table td{padding:14px 12px;font-size:14px;border-bottom:1px solid var(--line)}
+  .growth-table td.num{text-align:right;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--gray-700)}
+  .growth-table td.client{font-weight:600;color:var(--ink)}
+  .growth-table tr:hover{background:var(--gray-50)}
+  .pct{display:inline-block;padding:3px 10px;border-radius:2px;font-size:11px;font-weight:600;font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
+  .pct.up-strong{background:var(--accent-soft);color:var(--accent-deep)}
+  .pct.up{background:rgba(133,196,64,.07);color:var(--accent-deep)}
+  .pct.flat{background:var(--gray-100);color:var(--gray-500)}
+  .pct.down{background:var(--gray-200);color:var(--gray-700)}
+  .growth-side h4{font-family:'Barlow',sans-serif;font-weight:600;font-size:18px;margin-bottom:18px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+  .growth-side h4::before{content:"";width:24px;height:2px;background:var(--accent)}
+  .top-grower{border-top:1px solid var(--line);padding:18px 0;display:grid;grid-template-columns:28px 1fr auto auto;gap:16px;align-items:center}
+  .top-grower:last-child{border-bottom:1px solid var(--line)}
+  .tg-rank{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray-500);font-weight:500}
+  .tg-name{font-weight:600;font-size:14.5px;color:var(--ink)}
+  .tg-vol{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray-500)}
+  .tg-bar-wrap{grid-column:2 / -1;height:3px;background:var(--gray-200);margin-top:8px;position:relative}
+  .tg-bar{height:100%;background:var(--accent)}
+
+  /* ALIGNMENTS */
+  .align-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+  .align-card{background:var(--paper);border:1px solid var(--line);padding:36px;position:relative;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+  .align-card:hover{transform:translateY(-3px);border-color:var(--ink);box-shadow:0 12px 0 -8px var(--accent)}
+  .align-card-tag{position:absolute;top:0;left:36px;transform:translateY(-50%);background:var(--ink);color:var(--paper);padding:6px 16px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+  .align-card.comercial .align-card-tag{background:var(--accent);color:var(--ink)}
+  .align-card h3{font-family:'Barlow',sans-serif;font-weight:600;font-size:24px;margin:10px 0 22px;letter-spacing:-.015em}
+  .align-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .align-list li{padding-left:26px;position:relative;font-size:14.5px;line-height:1.5;color:var(--gray-700)}
+  .align-list li::before{content:"";position:absolute;left:0;top:9px;width:14px;height:2px;background:var(--accent)}
+  .align-list li strong{color:var(--ink);font-weight:600}
+
+  /* PLAN OPS - MATRIX */
+  .matrix-wrap{
+    overflow-x:auto;border:1px solid var(--line);
+    background:var(--paper);
+  }
+  .matrix{
+    width:100%;border-collapse:collapse;
+    font-family:'Barlow',sans-serif;
+    min-width:900px;
+  }
+  .matrix thead th{
+    background:var(--ink);color:var(--paper);
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:11px;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;
+    padding:18px 16px;text-align:center;
+    border-right:1px solid var(--gray-800);
+    vertical-align:middle;
+  }
+  .matrix thead th:last-child{border-right:none}
+  .matrix thead th.vertical-h{
+    text-align:left;background:var(--ink);
+    width:200px;
+  }
+  .matrix tbody td{
+    padding:0;border-bottom:1px solid var(--line);
+    border-right:1px solid var(--line);
+    text-align:center;vertical-align:middle;
+    height:74px;
+  }
+  .matrix tbody td:last-child{border-right:none}
+  .matrix tbody tr:last-child td{border-bottom:none}
+  .matrix tbody tr:hover{background:var(--gray-50)}
+  /* Highlight progress cells with warning yellow */
+  .matrix tbody td:has(.status-dot.progress){
+    background:var(--warn-soft);
+  }
+  .matrix tbody tr:hover td:has(.status-dot.progress){
+    background:rgba(245,197,24,.28);
+  }
+  .matrix .vertical-cell{
+    text-align:left;padding:16px 20px;
+    background:var(--gray-50);
+    border-right:2px solid var(--ink);
+  }
+  .matrix .vertical-cell .v-name{
+    font-family:'Barlow',sans-serif;font-weight:600;
+    font-size:16px;color:var(--ink);
+    letter-spacing:-.01em;
+  }
+  .matrix .vertical-cell .v-owner{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:10px;font-weight:500;
+    letter-spacing:.12em;text-transform:uppercase;
+    color:var(--gray-500);margin-top:4px;
+  }
+  .status-cell{
+    display:flex;flex-direction:column;align-items:center;
+    justify-content:center;gap:6px;height:100%;padding:12px;
+  }
+  .status-dot{
+    width:14px;height:14px;border-radius:50%;
+  }
+  .status-dot.done{
+    background:var(--accent);
+    box-shadow:0 0 0 4px var(--accent-soft);
+  }
+  .status-dot.progress{
+    background:var(--warn);
+    box-shadow:0 0 0 4px var(--warn-soft);
+  }
+  .status-dot.empty{
+    background:transparent;border:1.5px dashed var(--gray-300);
+  }
+  .status-text{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:9.5px;font-weight:600;
+    letter-spacing:.15em;text-transform:uppercase;
+  }
+  .status-text.done{color:var(--accent-deep)}
+  .status-text.progress{color:var(--warn-deep)}
+  .status-text.empty{color:var(--gray-400)}
+  .status-cell .note{
+    font-family:'Barlow',sans-serif;font-style:italic;
+    font-size:11px;color:var(--gray-500);font-weight:400;
+    margin-top:2px;line-height:1.3;
+  }
+
+  .matrix-legend{
+    display:flex;gap:32px;justify-content:flex-end;
+    margin-top:20px;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:11px;font-weight:500;
+    letter-spacing:.15em;text-transform:uppercase;
+    color:var(--gray-600);
+  }
+  .matrix-legend span{display:flex;align-items:center;gap:8px}
+  .matrix-legend .dot{width:12px;height:12px;border-radius:50%}
+  .matrix-legend .dot.done{background:var(--accent)}
+  .matrix-legend .dot.progress{background:var(--warn)}
+  .matrix-legend .dot.empty{background:transparent;border:1.5px dashed var(--gray-300)}
+
+  /* Specific tasks (S&OP, Last Mile) */
+  .specific-tasks{
+    margin-top:48px;
+    display:grid;grid-template-columns:1fr 1fr;gap:32px;
+  }
+  .specific-card{
+    background:var(--gray-50);
+    border:1px solid var(--line);
+    padding:32px;border-left:4px solid var(--accent);
+  }
+  .specific-card-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-bottom:8px;
+  }
+  .specific-card h4{
+    font-family:'Barlow',sans-serif;font-weight:700;font-size:20px;
+    letter-spacing:-.01em;
+  }
+  .specific-card .owner{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:10px;font-weight:500;
+    letter-spacing:.15em;text-transform:uppercase;
+    color:var(--gray-500);
+  }
+  .specific-card .lede{
+    font-size:13px;color:var(--gray-600);
+    margin-bottom:20px;font-style:italic;
+  }
+  .specific-tasks-list{
+    list-style:none;display:flex;flex-direction:column;gap:0;
+  }
+  .specific-tasks-list li{
+    display:grid;grid-template-columns:auto 1fr auto;
+    gap:14px;align-items:start;
+    padding:12px 0;border-bottom:1px dotted var(--gray-300);
+  }
+  .specific-tasks-list li:last-child{border-bottom:none}
+  .specific-tasks-list .dot{
+    width:9px;height:9px;border-radius:50%;margin-top:6px;
+  }
+  .specific-tasks-list .dot.done{background:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .specific-tasks-list .dot.progress{background:var(--warn);box-shadow:0 0 0 3px var(--warn-soft)}
+  .specific-tasks-list .text{font-size:14px;font-weight:500;color:var(--ink);line-height:1.4}
+  .specific-tasks-list .text .note{
+    display:block;font-weight:400;font-style:italic;
+    font-size:12.5px;color:var(--gray-500);margin-top:2px;
+  }
+  .specific-tasks-list .label{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:9.5px;font-weight:600;
+    letter-spacing:.15em;text-transform:uppercase;
+    white-space:nowrap;margin-top:5px;
+  }
+  .specific-tasks-list .label.done{color:var(--accent-deep)}
+  .specific-tasks-list .label.progress{color:var(--warn-deep)}
+
+  /* PROCESS BLOCK */
+  .process-block{margin-top:48px;background:var(--ink);color:var(--paper);padding:48px;display:grid;grid-template-columns:1fr 1.4fr;gap:60px;position:relative}
+  .process-block::before{content:"";position:absolute;top:-1px;left:0;width:80px;height:4px;background:var(--accent)}
+  .process-block-head .tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+  .process-block-head h3{font-family:'Barlow',sans-serif;font-weight:300;font-size:36px;line-height:1.05;letter-spacing:-.025em;color:var(--paper)}
+  .process-block-head h3 strong{font-weight:700}
+  .process-block-head p{font-family:'Barlow',sans-serif;font-weight:400;font-size:15px;line-height:1.55;color:var(--gray-300);margin-top:18px}
+  .process-pillars{display:flex;flex-direction:column;gap:0}
+  .pillar{display:grid;grid-template-columns:60px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--gray-800);align-items:start}
+  .pillar:first-child{border-top:1px solid var(--gray-800)}
+  .pillar-num{font-family:'Barlow',sans-serif;font-weight:200;font-size:32px;color:var(--accent);line-height:1;letter-spacing:-.03em}
+  .pillar-content h4{font-family:'Barlow',sans-serif;font-weight:600;font-size:17px;color:var(--paper);margin-bottom:6px}
+  .pillar-content p{font-family:'Barlow',sans-serif;font-weight:400;font-size:14px;color:var(--gray-300);line-height:1.55}
+
+  /* PRESENTATION NAV (next section) */
+  .next-section{
+    margin-top:60px;padding:28px 36px;
+    background:var(--paper);border:1px solid var(--ink);
+    display:flex;justify-content:space-between;align-items:center;gap:24px;
+    text-decoration:none;color:var(--ink);
+    transition:background .2s, color .2s;
+    cursor:pointer;
+  }
+  .next-section:hover{background:var(--ink);color:var(--paper)}
+  .next-section:hover .next-arrow{transform:translateX(4px);color:var(--accent)}
+  .next-section-tag{
+    font-family:'Barlow Condensed',sans-serif;font-size:10.5px;font-weight:600;
+    letter-spacing:.25em;text-transform:uppercase;color:var(--gray-500);
+    margin-bottom:8px;
+  }
+  .next-section:hover .next-section-tag{color:var(--accent)}
+  .next-section-title{
+    font-family:'Barlow',sans-serif;font-weight:600;font-size:22px;
+    letter-spacing:-.015em;
+  }
+  .next-arrow{
+    font-family:'Barlow',sans-serif;font-weight:200;font-size:48px;
+    line-height:1;color:var(--ink);
+    transition:transform .25s ease, color .25s ease;
+  }
+  .escalation .next-section{background:transparent;border-color:var(--paper);color:var(--paper)}
+  .escalation .next-section:hover{background:var(--paper);color:var(--ink)}
+  .escalation .next-section .next-arrow{color:var(--paper)}
+  .escalation .next-section:hover .next-arrow{color:var(--accent-deep)}
+  .escalation .next-section-tag{color:var(--gray-400)}
+
+  /* COLLAPSIBLE SECTIONS */
+  details.section-collapsible{
+    max-width:1400px;margin:0 auto;
+    border-bottom:1px solid var(--line);
+    position:relative;
+  }
+  details.section-collapsible[open]{
+    background:var(--paper);
+  }
+  details.section-collapsible > summary{
+    list-style:none;cursor:pointer;
+    padding:40px;
+    display:grid;grid-template-columns:200px 1fr auto;gap:40px;
+    align-items:center;
+    transition:background .2s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  details.section-collapsible > summary::-webkit-details-marker{display:none}
+  details.section-collapsible > summary:hover{background:var(--gray-50)}
+  details.section-collapsible[open] > summary{
+    background:var(--gray-50);
+    border-bottom:1px solid var(--line);
+    padding-bottom:36px;
+  }
+  details.section-collapsible[open] > summary:hover{background:var(--gray-100)}
+
+  .summary-num{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:12px;letter-spacing:.25em;text-transform:uppercase;
+    color:var(--gray-500);font-weight:500;
+    border-top:2px solid var(--ink);padding-top:14px;
+  }
+  .summary-num strong{
+    display:block;font-family:'Barlow',sans-serif;
+    font-weight:200;font-size:42px;color:var(--ink);
+    letter-spacing:-.03em;margin-top:6px;line-height:1;
+  }
+  .summary-title{
+    font-family:'Barlow',sans-serif;font-weight:300;
+    font-size:clamp(28px,3.4vw,46px);line-height:1;letter-spacing:-.03em;
+    color:var(--ink);
+  }
+  .summary-title strong{font-weight:700}
+  .summary-title .hl-thin{border-bottom:3px solid var(--accent);padding-bottom:2px}
+  .summary-meta{
+    display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+    margin-top:14px;
+  }
+  .summary-mini-pill{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:4px 10px;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:10px;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;
+  }
+  .summary-mini-pill.warn{background:var(--warn-soft);color:var(--warn-deep)}
+  .summary-mini-pill.warn::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--warn)}
+  .summary-mini-pill.ok{background:var(--accent-soft);color:var(--accent-deep)}
+  .summary-mini-pill.ok::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  .summary-mini-pill.neutral{background:var(--gray-100);color:var(--gray-600)}
+  .summary-mini-pill.neutral::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gray-400)}
+
+  .summary-chevron{
+    width:44px;height:44px;border:1.5px solid var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Barlow',sans-serif;font-weight:300;
+    font-size:24px;line-height:1;color:var(--ink);
+    transition:transform .3s ease, background .2s ease, color .2s ease;
+  }
+  details.section-collapsible[open] .summary-chevron{
+    transform:rotate(180deg);
+    background:var(--ink);color:var(--accent);
+  }
+  details.section-collapsible > summary:hover .summary-chevron{
+    background:var(--ink);color:var(--paper);
+  }
+
+  .section-body{
+    padding:50px 40px 80px;
+    animation:expandIn .35s ease;
+  }
+  @keyframes expandIn{
+    from{opacity:0;transform:translateY(-8px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  /* Escalation collapsible variant - dark theme */
+  details.section-collapsible.escalation-collapsible{
+    background:var(--ink);color:var(--paper);
+    border-bottom:1px solid #000;
+    max-width:none;
+  }
+  details.section-collapsible.escalation-collapsible > summary{
+    background:var(--ink);
+    max-width:1400px;margin:0 auto;
+  }
+  details.section-collapsible.escalation-collapsible > summary:hover{background:var(--ink-2)}
+  details.section-collapsible.escalation-collapsible[open] > summary{
+    background:var(--ink-2);border-bottom:1px solid var(--gray-800);
+  }
+  details.section-collapsible.escalation-collapsible .summary-num{
+    border-top-color:var(--paper);color:var(--gray-400);
+  }
+  details.section-collapsible.escalation-collapsible .summary-num strong{color:var(--paper)}
+  details.section-collapsible.escalation-collapsible .summary-title{color:var(--paper)}
+  details.section-collapsible.escalation-collapsible .summary-chevron{
+    border-color:var(--paper);color:var(--paper);
+  }
+  details.section-collapsible.escalation-collapsible[open] .summary-chevron{
+    background:var(--paper);color:var(--ink);
+  }
+  details.section-collapsible.escalation-collapsible > summary:hover .summary-chevron{
+    background:var(--paper);color:var(--ink);
+  }
+  details.section-collapsible.escalation-collapsible .section-body{
+    max-width:1320px;margin:0 auto;
+  }
+
+  /* Presenter badge — small cue next to owners that signals "ready to present" */
+  .presenter-badge{
+    display:inline-flex;align-items:center;gap:6px;
+    margin-top:8px;
+    padding:4px 10px;
+    background:var(--ink);color:var(--accent);
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:10px;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;
+    width:fit-content;
+  }
+  .presenter-badge::before{
+    content:"";width:6px;height:6px;border-radius:50%;
+    background:var(--accent);
+  }
+
+  /* Pending counter for sections */
+  .pending-pill{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:6px 14px;background:var(--warn-soft);
+    color:var(--warn-deep);
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:11px;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;
+    margin-top:18px;
+  }
+  .pending-pill::before{
+    content:"";width:8px;height:8px;border-radius:50%;
+    background:var(--warn);
+  }
+
+  /* ACTION ITEMS section (replaces specific-tasks layout) */
+  .action-grid{
+    margin-top:28px;
+    display:flex;flex-direction:column;gap:0;
+    border:1px solid var(--line);
+  }
+  .action-item{
+    background:var(--paper);
+    padding:16px 24px 16px 28px;
+    display:grid;
+    grid-template-columns:110px 1fr auto auto;
+    gap:24px;align-items:center;
+    border-bottom:1px solid var(--line);
+    transition:background .2s;
+    position:relative;
+    min-height:0;
+  }
+  .action-item:last-child{border-bottom:none}
+  .action-item:hover{background:var(--gray-50)}
+  .action-item.progress{
+    background:var(--warn-soft);
+  }
+  .action-item.progress:hover{background:rgba(245,197,24,.22)}
+  .action-item.progress::before{
+    content:"";position:absolute;top:0;left:0;width:4px;height:100%;
+    background:var(--warn);
+  }
+  .action-item.done::before{
+    content:"";position:absolute;top:0;left:0;width:4px;height:100%;
+    background:var(--accent);
+  }
+  .action-area-tag{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:10px;font-weight:600;
+    letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gray-500);
+    margin-bottom:0;
+  }
+  .action-item.progress .action-area-tag{color:var(--warn-deep)}
+  .action-item.done .action-area-tag{color:var(--accent-deep)}
+  .action-task{
+    font-family:'Barlow',sans-serif;font-weight:600;
+    font-size:14.5px;line-height:1.35;color:var(--ink);
+    letter-spacing:-.005em;
+  }
+  .action-owner{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:10px;font-weight:500;
+    letter-spacing:.15em;text-transform:uppercase;
+    color:var(--gray-500);
+    text-align:right;
+    white-space:nowrap;
+  }
+  .action-status{
+    display:flex;align-items:center;gap:8px;
+    white-space:nowrap;
+  }
+  .action-status .dot{
+    width:10px;height:10px;border-radius:50%;
+    flex-shrink:0;
+  }
+  .action-status .dot.done{background:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .action-status .dot.progress{background:var(--warn);box-shadow:0 0 0 3px var(--warn-soft)}
+  .action-status .label{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:9.5px;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;
+  }
+  .action-status .label.done{color:var(--accent-deep)}
+  .action-status .label.progress{color:var(--warn-deep)}
+
+  /* ESCALATION */
+  .escalation{background:var(--ink);color:var(--paper);padding:90px 40px;margin:0 -40px -1px}
+  .escalation-inner{max-width:1320px;margin:0 auto}
+  .escalation .section-head{margin-bottom:60px}
+  .escalation .section-num{border-top-color:var(--paper);color:var(--gray-400)}
+  .escalation .section-num strong{color:var(--paper)}
+  .escalation .section-title{color:var(--paper)}
+  .escalation .section-title .hl-thin{border-bottom-color:var(--accent)}
+  .escalation .section-lede{color:var(--gray-400)}
+  .escalation .section-lede strong{color:var(--paper)}
+  .escal-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px}
+  .escal-step{padding:36px 28px;border-right:1px solid var(--gray-800);position:relative}
+  .escal-step:last-child{border-right:none}
+  .escal-step::before{content:"";position:absolute;top:36px;left:28px;width:32px;height:2px;background:var(--accent)}
+  .escal-level{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;padding-top:12px}
+  .escal-time{font-family:'Barlow',sans-serif;font-weight:200;font-size:42px;color:var(--paper);line-height:1;letter-spacing:-.03em;margin-bottom:20px}
+  .escal-time small{display:block;font-size:13px;font-weight:500;color:var(--gray-400);margin-top:8px;letter-spacing:.05em}
+  .escal-who{font-size:14px;line-height:1.55;color:var(--gray-300)}
+  .escal-who strong{color:var(--paper);font-weight:600}
+  .channel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray-800);border:1px solid var(--gray-800);margin-top:60px}
+  .channel{background:var(--ink);padding:32px}
+  .channel-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .channel-name{font-family:'Barlow',sans-serif;font-weight:600;font-size:22px;color:var(--paper);margin-bottom:10px;letter-spacing:-.01em}
+  .channel-detail{color:var(--gray-300);font-size:14px;line-height:1.55}
+  .channel-detail em{color:var(--accent);font-style:normal;font-weight:500}
+
+  /* LECCIONES */
+  .lessons-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:0;border-top:1px solid var(--line)}
+  .lesson{padding:32px 22px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:18px;min-height:210px}
+  .lesson:last-child{border-right:none}
+  .lesson-num{font-family:'Barlow',sans-serif;font-weight:200;font-size:48px;color:var(--ink);line-height:1;letter-spacing:-.03em;border-bottom:2px solid var(--accent);padding-bottom:8px;width:fit-content}
+  .lesson-text{font-family:'Barlow',sans-serif;font-weight:500;font-size:14.5px;line-height:1.4;color:var(--ink)}
+
+  /* CLOSING BANNER */
+  .closing-banner{background:var(--accent);padding:80px 40px;text-align:center}
+  .closing-banner-inner{max-width:900px;margin:0 auto}
+  .closing-banner .tag{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);margin-bottom:24px}
+  .closing-banner h2{font-family:'Barlow',sans-serif;font-weight:300;font-size:clamp(36px,4.5vw,56px);line-height:1.1;letter-spacing:-.03em;color:var(--ink)}
+  .closing-banner h2 strong{font-weight:700}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:var(--gray-400);padding:36px 40px;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+  .footer-inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+  .footer-inner span:first-child{display:flex;align-items:center;gap:10px}
+  .footer-inner span:first-child::before{content:"";width:8px;height:8px;background:var(--accent);border-radius:50%}
+
+  /* Responsive */
+  @media(max-width:1024px){
+    .hero-grid,.forecast-grid,.growth-grid{grid-template-columns:1fr}
+    .kpi-strip{grid-template-columns:1fr;gap:40px 0}
+    .kpi{padding:24px;border-left:none;border-top:1px solid var(--line)}
+    .kpi:first-child{border-top:none}
+    .align-grid{grid-template-columns:1fr}
+    .escal-flow{grid-template-columns:1fr 1fr;gap:1px;background:var(--gray-800)}
+    .escal-step{border-right:none;background:var(--ink)}
+    .channel-grid{grid-template-columns:1fr}
+    .lessons-grid{grid-template-columns:repeat(2,1fr)}
+    .lesson{border-right:none;border-bottom:1px solid var(--line)}
+    .section-head{grid-template-columns:1fr}
+    .process-block{grid-template-columns:1fr;padding:36px;gap:40px}
+    .specific-tasks{grid-template-columns:1fr}
+    .action-item{
+      grid-template-columns:1fr;gap:8px;
+      padding:18px 20px 18px 24px;
+    }
+    .action-owner{text-align:left}
+    .action-status{margin-top:4px}
+    details.section-collapsible > summary{
+      grid-template-columns:1fr;gap:16px;padding:28px;
+    }
+    .summary-chevron{justify-self:end}
+    .section-body{padding:32px 28px 60px}
+    .peak-banner{grid-template-columns:1fr;gap:18px}
+    .peak-banner-num{font-size:48px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span class="topbar-brand"><span class="dot"></span>99 minutos · Hot Sale 2026</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#forecast"><span style="color:var(--accent);margin-right:6px">01</span>Forecast</a>
+      <a href="#growth"><span style="color:var(--accent);margin-right:6px">02</span>Crecimiento</a>
+      <a href="#alineaciones"><span style="color:var(--accent);margin-right:6px">03</span>Alineaciones</a>
+      <a href="#plan"><span style="color:var(--accent);margin-right:6px">04</span>Plan Ops</a>
+      <a href="#escalamiento"><span style="color:var(--accent);margin-right:6px">05</span>Escalamiento</a>
+      <a href="#lecciones"><span style="color:var(--accent);margin-right:6px">06</span>Lecciones</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">
+        <span class="pip"></span>
+        Sesión de Alineación · Hot Sale 2026
+      </div>
+      <h1>Plan de<br><span class="hl"><strong>Hot&nbsp;Sale</strong></span><br>2026</h1>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-row">
+        <span class="hero-meta-label">Arranque</span>
+        <span class="hero-meta-value"><strong>25 mayo 2026</strong> · W22</span>
+      </div>
+      <div class="hero-meta-row countdown-row">
+        <span class="hero-meta-label">Countdown</span>
+        <span class="countdown-value">
+          <span class="countdown-num">5</span>
+          <span class="countdown-label">días para Hot Sale</span>
+        </span>
+      </div>
+      <div class="hero-meta-row">
+        <span class="hero-meta-label">Pico</span>
+        <span class="hero-meta-value"><span class="accent-text">+30%</span> vs baseline · W22</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="kpi-strip">
+  <div class="kpi">
+    <div class="kpi-label">Forecast Parcel · Mayo</div>
+    <div class="kpi-value">645.6<span class="kpi-unit">K paq</span></div>
+    <div class="kpi-delta">KAM · vs estadístico 655.1K</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Pico semana 22</div>
+    <div class="kpi-value">179.3<span class="kpi-unit">K paq</span></div>
+    <div class="kpi-delta"><span class="badge">+30.4%</span> vs baseline</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Volumen Hot Sale</div>
+    <div class="kpi-value">346<span class="kpi-unit">K paq</span></div>
+    <div class="kpi-delta">W22 + W23 combinados</div>
+  </div>
+</div>
+
+<details id="forecast" class="section-collapsible" open>
+  <summary>
+    <div class="summary-num">Sección<strong>01</strong></div>
+    <div>
+      <div class="summary-title">Forecast de <span class="hl-thin"><strong>demanda</strong></span></div>
+      <div class="summary-meta">
+        <span class="summary-mini-pill ok">Datos listos</span>
+        <span class="summary-mini-pill neutral">Presenta · S&amp;OP</span>
+      </div>
+    </div>
+    <div class="summary-chevron">⌄</div>
+  </summary>
+  <div class="section-body">
+    <p class="section-lede" style="margin-top:0;margin-bottom:48px">El pico de Hot Sale concentra dos semanas críticas. <strong>W22 marca el peak con +30% vs baseline</strong>; W23 sostiene volumen alto antes del enfriamiento. <strong>S&amp;OP presenta supuestos, accuracy y cap management</strong>.</p>
+
+  <div class="forecast-grid">
+    <div class="chart-card">
+      <div class="chart-card-head">
+        <div>
+          <h3>Volumen semanal · Parcel</h3>
+          <div class="chart-card-sub">W13 — W24 · 2026</div>
+        </div>
+        <div class="chart-legend">
+          <span><i style="background:var(--gray-400)"></i>Real</span>
+          <span><i style="background:var(--ink)"></i>Forecast</span>
+          <span><i class="frame"></i>Hot Sale</span>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="forecastChart"></canvas></div>
+    </div>
+
+    <div class="forecast-stats">
+      <div class="stat-row">
+        <div>
+          <div class="stat-label">Forecast KAM mayo</div>
+          <div class="stat-detail">Construido por cuenta</div>
+        </div>
+        <div class="stat-num dark">645.6<small>K</small></div>
+      </div>
+      <div class="stat-row">
+        <div>
+          <div class="stat-label">Forecast estadístico</div>
+          <div class="stat-detail">Modelo baseline</div>
+        </div>
+        <div class="stat-num dark">655.1<small>K</small></div>
+      </div>
+      <div class="stat-row">
+        <div>
+          <div class="stat-label">Pico W22 (25-31 mayo)</div>
+          <div class="stat-detail">Hot Sale arranca</div>
+        </div>
+        <div class="stat-num accent">179.3<small>K</small></div>
+      </div>
+      <div class="stat-row">
+        <div>
+          <div class="stat-label">W23 sostén</div>
+          <div class="stat-detail">Cola de Hot Sale</div>
+        </div>
+        <div class="stat-num accent">166.9<small>K</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="peak-banner">
+    <div>
+      <div class="peak-banner-label">Punto de tensión</div>
+    </div>
+    <div class="peak-banner-text">Dos semanas concentran <strong>+346K paquetes</strong> — 53% del mes. La capacidad debe estar confirmada y probada <strong>antes del 15 de mayo</strong>.</div>
+    <div class="peak-banner-num">53<span style="font-size:36px;color:var(--accent)">%</span></div>
+  </div>
+  </div>
+</details>
+
+<details id="growth" class="section-collapsible" open>
+  <summary>
+    <div class="summary-num">Sección<strong>02</strong></div>
+    <div>
+      <div class="summary-title">Crecimiento por <span class="hl-thin"><strong>cliente</strong></span></div>
+      <div class="summary-meta">
+        <span class="summary-mini-pill ok">15 cuentas top</span>
+        <span class="summary-mini-pill neutral">Presenta · KAM</span>
+      </div>
+    </div>
+    <div class="summary-chevron">⌄</div>
+  </summary>
+  <div class="section-body">
+    <p class="section-lede" style="margin-top:0;margin-bottom:48px">Top 15 cuentas concentran el grueso del volumen. <strong>NU Bank lidera en escala absoluta</strong>; Cubbo, NELO y Hound Express empujan el crecimiento porcentual más agresivo. <strong>KAM presenta growth por cuenta</strong> y atención focalizada.</p>
+
+  <div class="growth-grid">
+    <div>
+      <table class="growth-table">
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th class="num">FCAST Abr</th>
+            <th class="num">FCAST May</th>
+            <th class="num">Δ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="client">NU Bank</td><td class="num">136,484</td><td class="num">180,000</td><td class="num"><span class="pct up-strong">+31.9%</span></td></tr>
+          <tr><td class="client">Palacio de Hierro (Shipium)</td><td class="num">60,000</td><td class="num">90,000</td><td class="num"><span class="pct up-strong">+50.0%</span></td></tr>
+          <tr><td class="client">Klar</td><td class="num">65,000</td><td class="num">60,000</td><td class="num"><span class="pct down">−7.7%</span></td></tr>
+          <tr><td class="client">Santander</td><td class="num">62,000</td><td class="num">50,000</td><td class="num"><span class="pct down">−19.4%</span></td></tr>
+          <tr><td class="client">Pomelo</td><td class="num">39,600</td><td class="num">45,000</td><td class="num"><span class="pct up">+13.6%</span></td></tr>
+          <tr><td class="client">NELO</td><td class="num">24,000</td><td class="num">40,400</td><td class="num"><span class="pct up-strong">+68.3%</span></td></tr>
+          <tr><td class="client">Axo Privalia</td><td class="num">38,000</td><td class="num">40,000</td><td class="num"><span class="pct up">+5.3%</span></td></tr>
+          <tr><td class="client">Stori</td><td class="num">35,000</td><td class="num">35,000</td><td class="num"><span class="pct flat">0.0%</span></td></tr>
+          <tr><td class="client">Sellers Liverpool</td><td class="num">31,137</td><td class="num">31,782</td><td class="num"><span class="pct up">+2.1%</span></td></tr>
+          <tr><td class="client">Hound Express</td><td class="num">18,000</td><td class="num">30,000</td><td class="num"><span class="pct up-strong">+66.7%</span></td></tr>
+          <tr><td class="client">H&amp;M</td><td class="num">20,000</td><td class="num">30,000</td><td class="num"><span class="pct up-strong">+50.0%</span></td></tr>
+          <tr><td class="client">EMONK</td><td class="num">24,000</td><td class="num">24,000</td><td class="num"><span class="pct flat">0.0%</span></td></tr>
+          <tr><td class="client">Digital Finance</td><td class="num">15,000</td><td class="num">17,000</td><td class="num"><span class="pct up">+13.3%</span></td></tr>
+          <tr><td class="client">Inditex</td><td class="num">16,200</td><td class="num">16,740</td><td class="num"><span class="pct up">+3.3%</span></td></tr>
+          <tr><td class="client">Sephora</td><td class="num">13,000</td><td class="num">15,000</td><td class="num"><span class="pct up">+15.4%</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="growth-side">
+      <h4>Crecimientos extraordinarios — atención focalizada</h4>
+      <div class="top-grower">
+        <div class="tg-rank">01</div>
+        <div class="tg-name">Cubbo</div>
+        <div class="tg-vol">4K → 12K</div>
+        <div class="pct up-strong">+200%</div>
+        <div class="tg-bar-wrap"><div class="tg-bar" style="width:100%"></div></div>
+      </div>
+      <div class="top-grower">
+        <div class="tg-rank">02</div>
+        <div class="tg-name">Sellers Claro Shop</div>
+        <div class="tg-vol">3K → 8K</div>
+        <div class="pct up-strong">+167%</div>
+        <div class="tg-bar-wrap"><div class="tg-bar" style="width:83%"></div></div>
+      </div>
+      <div class="top-grower">
+        <div class="tg-rank">03</div>
+        <div class="tg-name">Coppel</div>
+        <div class="tg-vol">2.9K → 5.6K</div>
+        <div class="pct up-strong">+91%</div>
+        <div class="tg-bar-wrap"><div class="tg-bar" style="width:46%"></div></div>
+      </div>
+      <div class="top-grower">
+        <div class="tg-rank">04</div>
+        <div class="tg-name">NELO</div>
+        <div class="tg-vol">24K → 40K</div>
+        <div class="pct up-strong">+68%</div>
+        <div class="tg-bar-wrap"><div class="tg-bar" style="width:34%"></div></div>
+      </div>
+      <div class="top-grower">
+        <div class="tg-rank">05</div>
+        <div class="tg-name">Hound Express</div>
+        <div class="tg-vol">18K → 30K</div>
+        <div class="pct up-strong">+67%</div>
+        <div class="tg-bar-wrap"><div class="tg-bar" style="width:33%"></div></div>
+      </div>
+      <div class="top-grower">
+        <div class="tg-rank">06</div>
+        <div class="tg-name">Busca Libre</div>
+        <div class="tg-vol">5K → 8K</div>
+        <div class="pct up-strong">+60%</div>
+        <div class="tg-bar-wrap"><div class="tg-bar" style="width:30%"></div></div>
+      </div>
+      <div class="top-grower">
+        <div class="tg-rank">07</div>
+        <div class="tg-name">Coppel MKP</div>
+        <div class="tg-vol">1.5K → 2.3K</div>
+        <div class="pct up-strong">+56%</div>
+        <div class="tg-bar-wrap"><div class="tg-bar" style="width:28%"></div></div>
+      </div>
+
+      <h4 style="margin-top:40px">Cuentas con contracción</h4>
+      <div class="top-grower">
+        <div class="tg-rank">!</div>
+        <div class="tg-name">Santander</div>
+        <div class="tg-vol">62K → 50K</div>
+        <div class="pct down">−19.4%</div>
+      </div>
+      <div class="top-grower">
+        <div class="tg-rank">!</div>
+        <div class="tg-name">Klar</div>
+        <div class="tg-vol">65K → 60K</div>
+        <div class="pct down">−7.7%</div>
+      </div>
+      <div class="top-grower">
+        <div class="tg-rank">!</div>
+        <div class="tg-name">Infracommerce / Ecomsur</div>
+        <div class="tg-vol">11.7K → 11.1K</div>
+        <div class="pct down">−4.5%</div>
+      </div>
+    </div>
+  </div>
+  </div>
+</details>
+
+<details id="alineaciones" class="section-collapsible" open>
+  <summary>
+    <div class="summary-num">Sección<strong>03</strong></div>
+    <div>
+      <div class="summary-title">Alineaciones entre <span class="hl-thin"><strong>equipos</strong></span></div>
+      <div class="summary-meta">
+        <span class="summary-mini-pill warn">Dependencias por cerrar</span>
+        <span class="summary-mini-pill neutral">Comercial · Tech · Ops · Finanzas</span>
+      </div>
+    </div>
+    <div class="summary-chevron">⌄</div>
+  </summary>
+  <div class="section-body">
+    <p class="section-lede" style="margin-top:0;margin-bottom:48px">Operaciones no llega sola. <strong>Comercial, Tecnología y Finanzas son co-responsables</strong> del éxito de esta temporada. <strong>Cada área presenta sus compromisos</strong> y cierra dependencias.</p>
+
+  <div class="align-grid">
+    <div class="align-card comercial">
+      <div class="align-card-tag">Comercial</div>
+      <h3>Reglas del juego con clientes</h3>
+      <ul class="align-list">
+        <li>Definición y comunicación de <strong>cap management</strong> con clientes</li>
+        <li><strong>Freeze</strong> de arranques comerciales Parcel: <strong>24 / abril</strong></li>
+        <li><strong>Freeze</strong> de recibos FF: <strong>21 / mayo</strong> · Integraciones y altas: <strong>15 / mayo</strong></li>
+        <li>Compartir matriz de escalamiento de ambas partes</li>
+        <li>Alineación de indicadores y reportes</li>
+        <li>Escalamiento diario de forecast vs volumen real</li>
+        <li>Negociación de ventanas de recolección con los clientes</li>
+      </ul>
+    </div>
+
+    <div class="align-card">
+      <div class="align-card-tag">Tecnología</div>
+      <h3>Estabilidad y presencia</h3>
+      <ul class="align-list">
+        <li>Empuje de proyectos actuales (<strong>Geocoding, PNRs, First Mile</strong>) y <strong>freeze de cambios</strong> antes del peak</li>
+        <li><strong>Presencia en Sort Center después de las 6pm</strong> durante toda la temporada</li>
+      </ul>
+    </div>
+
+    <div class="align-card">
+      <div class="align-card-tag">Operaciones</div>
+      <h3>Visibilidad en tiempo real</h3>
+      <ul class="align-list">
+        <li>Visibilidad a través de <strong>tableros y Claude</strong></li>
+        <li>Tracking de <strong>volumen, OTD, lead time y costos</strong> diario</li>
+      </ul>
+    </div>
+
+    <div class="align-card">
+      <div class="align-card-tag">Finanzas</div>
+      <h3>Pulso financiero diario</h3>
+      <ul class="align-list">
+        <li>Alineación de <strong>procesos de costos y facturación</strong> para visibilidad diaria durante la temporada</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</details>
+
+<details id="plan" class="section-collapsible" open>
+  <summary>
+    <div class="summary-num">Sección<strong>04</strong></div>
+    <div>
+      <div class="summary-title">Plan de <span class="hl-thin"><strong>Operaciones</strong></span></div>
+      <div class="summary-meta">
+        <span class="summary-mini-pill warn">3 en proceso</span>
+        <span class="summary-mini-pill ok">18 listas</span>
+        <span class="summary-mini-pill neutral">Presenta · cada owner</span>
+      </div>
+    </div>
+    <div class="summary-chevron">⌄</div>
+  </summary>
+  <div class="section-body">
+    <p class="section-lede" style="margin-top:0;margin-bottom:48px">Ocho verticales coordinadas con tres focos comunes: <strong>definir capacidad, confirmarla y documentar escenarios de riesgo</strong>. <strong>Quedan 3 confirmaciones de capacidad pendientes</strong> — First Mile, Middle Mile y Last Mile.</p>
+
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th class="vertical-h">Vertical / Owner</th>
+          <th>Definir<br>capacidad requerida</th>
+          <th>Confirmar<br>capacidad</th>
+          <th>Documentar<br>escenarios de riesgo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="vertical-cell">
+            <div class="v-name">First Mile</div>
+            <div class="v-owner">Andrés Mariluz</div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+              <div class="note">Marcado por cliente</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot progress"></div>
+              <div class="status-text progress">En proceso</div>
+              <div class="note">Flota propia + proveedor foráneo</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+              <div class="note">Matriz de riesgos</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="vertical-cell">
+            <div class="v-name">Fulfillment</div>
+            <div class="v-owner">Jose Manuel Mancera</div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+              <div class="note">Base, temporal y maquila</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+              <div class="note">Activo fijo</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="vertical-cell">
+            <div class="v-name">Sort Center</div>
+            <div class="v-owner">Andrés Mariluz</div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+              <div class="note">Base, temporal y maquila</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+              <div class="note">Activo fijo</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="vertical-cell">
+            <div class="v-name">Middle Mile</div>
+            <div class="v-owner">Andrés Mariluz</div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot progress"></div>
+              <div class="status-text progress">En proceso</div>
+              <div class="note">Base y proveedor</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+              <div class="note">Funcionamiento del backup</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="vertical-cell">
+            <div class="v-name">Last Mile</div>
+            <div class="v-owner">Manuel A. López</div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot progress"></div>
+              <div class="status-text progress">En proceso</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+              <div class="note">Manejo de backups</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="vertical-cell">
+            <div class="v-name">Control Tower</div>
+            <div class="v-owner">Jorge F. Velasco</div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+              <div class="note">NAL</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+              <div class="note">NAL</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="vertical-cell">
+            <div class="v-name">Logística Inversa</div>
+            <div class="v-owner">Andrés Mariluz</div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+            </div>
+          </td>
+          <td>
+            <div class="status-cell">
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="matrix-legend">
+    <span><span class="dot done"></span>Listo</span>
+    <span><span class="dot progress"></span>En proceso</span>
+    <span><span class="dot empty"></span>No aplica</span>
+  </div>
+
+  <!-- ACTION ITEMS ADICIONALES -->
+  <div style="margin-top:60px">
+    <div style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:24px;margin-bottom:8px">
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gray-500);margin-bottom:10px">— Más allá de capacidades</div>
+        <h3 style="font-family:'Barlow',sans-serif;font-weight:300;font-size:36px;line-height:1;letter-spacing:-.025em">Action Items <strong>adicionales</strong></h3>
+        <p style="font-family:'Barlow',sans-serif;font-weight:400;font-size:15px;line-height:1.5;color:var(--gray-600);margin-top:14px;max-width:680px">Actividades transversales con dueño nombrado. Cada owner presenta su action item en sesión.</p>
+      </div>
+      <div class="pending-pill">4 pendientes · 7 listos</div>
+    </div>
+
+    <div class="action-grid">
+
+      <div class="action-item done">
+        <div class="action-area-tag">S&amp;OP</div>
+        <div class="action-task">Definir forecast de Hot Sale</div>
+        <div class="action-owner">Felipe Tirado · Jorge F. Velasco</div>
+        <div class="action-status">
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
+        </div>
+      </div>
+
+      <div class="action-item done">
+        <div class="action-area-tag">S&amp;OP</div>
+        <div class="action-task">Control diario de forecast accuracy</div>
+        <div class="action-owner">Felipe Tirado · Jorge F. Velasco</div>
+        <div class="action-status">
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
+        </div>
+      </div>
+
+      <div class="action-item done">
+        <div class="action-area-tag">S&amp;OP</div>
+        <div class="action-task">Definir cap management</div>
+        <div class="action-owner">Felipe Tirado · Jorge F. Velasco</div>
+        <div class="action-status">
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
+        </div>
+      </div>
+
+      <div class="action-item done">
+        <div class="action-area-tag">Last Mile · FF</div>
+        <div class="action-task">Definir forecast y control diario de accuracy (FF)</div>
+        <div class="action-owner">Manuel A. López</div>
+        <div class="action-status">
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
+        </div>
+      </div>
+
+      <div class="action-item done">
+        <div class="action-area-tag">Last Mile</div>
+        <div class="action-task">Definir incentivos y penalizaciones durante la temporada</div>
+        <div class="action-owner">Manuel A. López</div>
+        <div class="action-status">
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
+        </div>
+      </div>
+
+      <div class="action-item progress">
+        <div class="action-area-tag">Last Mile</div>
+        <div class="action-task">Agendar visitas a operaciones principales</div>
+        <div class="action-owner">Manuel A. López</div>
+        <div class="action-status">
+          <div class="dot progress"></div>
+          <div class="label progress">En proceso</div>
+        </div>
+      </div>
+
+      <div class="action-item done">
+        <div class="action-area-tag">Tech</div>
+        <div class="action-task">Definir guardia para soporte post 6pm</div>
+        <div class="action-owner">Jonathan Andrade · Guillermo Cabrera</div>
+        <div class="action-status">
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
+        </div>
+      </div>
+
+      <div class="action-item progress">
+        <div class="action-area-tag">Finanzas</div>
+        <div class="action-task">Establecer visibilidad diaria financiera</div>
+        <div class="action-owner">Joel Gallegos</div>
+        <div class="action-status">
+          <div class="dot progress"></div>
+          <div class="label progress">En proceso</div>
+        </div>
+      </div>
+
+      <div class="action-item progress">
+        <div class="action-area-tag">Finanzas</div>
+        <div class="action-task">Abastecer RQs en tiempo para Hot Sale</div>
+        <div class="action-owner">Paulina Martínez Zavala</div>
+        <div class="action-status">
+          <div class="dot progress"></div>
+          <div class="label progress">En proceso</div>
+        </div>
+      </div>
+
+      <div class="action-item progress">
+        <div class="action-area-tag">Operaciones</div>
+        <div class="action-task">Actualizar matriz de escalamiento de UTR y LM</div>
+        <div class="action-owner">Andrés Mariluz · Manuel A. López</div>
+        <div class="action-status">
+          <div class="dot progress"></div>
+          <div class="label progress">En proceso</div>
+        </div>
+      </div>
+
+      <div class="action-item done">
+        <div class="action-area-tag">KAM</div>
+        <div class="action-task">Enviar comunicado el 15 de mayo con reglas de forecast y condiciones operativas durante Hot Sale</div>
+        <div class="action-owner">Jorge F. Velasco</div>
+        <div class="action-status">
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="process-block">
+    <div class="process-block-head">
+      <div class="tag">En paralelo · Construcción continua</div>
+      <h3>Procesos administrativos<br>y <strong>SLAs entre áreas</strong></h3>
+      <p>Más allá del peak, estamos construyendo los procesos que rigen la operación de Fulfillment y Parcel todos los días, y los niveles de servicio entre áreas. El objetivo: que cada miembro del equipo sepa <strong style="color:var(--accent)">con quién, cómo y en qué tiempo</strong> se escala — todos hablando el mismo idioma.</p>
+    </div>
+    <div class="process-pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-content">
+          <h4>Procesos administrativos de Fulfillment</h4>
+          <p>Documentación end-to-end: recibos, inventarios, picking, packing, salidas y reconciliación con clientes. Una sola fuente de verdad para todos los turnos y equipos.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-content">
+          <h4>Procesos administrativos de Parcel</h4>
+          <p>Recolección, ingreso a sort, distribución y última milla. Reglas claras de cap management, manejo de excepciones y cierre operativo diario.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-content">
+          <h4>SLAs entre áreas</h4>
+          <p>Tiempos de respuesta acordados entre Operaciones, Comercial, Tecnología y Finanzas. Cada interacción crítica con un tiempo objetivo y un responsable nombrado.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <div class="pillar-content">
+          <h4>Matriz de escalamientos</h4>
+          <p>Visibilidad de con quién, cómo y cuándo se escala — disponible para todos los equipos. Cada nivel con su tiempo y su canal definidos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</details>
+
+<details id="escalamiento" class="section-collapsible escalation-collapsible" open>
+  <summary>
+    <div class="summary-num">Sección<strong>05</strong></div>
+    <div>
+      <div class="summary-title">Canales de comunicación y <span class="hl-thin"><strong>escalamiento</strong></span></div>
+      <div class="summary-meta">
+        <span class="summary-mini-pill ok">4 niveles definidos</span>
+        <span class="summary-mini-pill neutral">3 canales activos</span>
+      </div>
+    </div>
+    <div class="summary-chevron">⌄</div>
+  </summary>
+  <div class="section-body">
+    <p class="section-lede" style="margin-top:0;margin-bottom:48px;color:var(--gray-400)">Una decisión perdida en una cadena de mensajes cuesta horas de operación. <strong style="color:var(--paper)">Estos son los canales y los tiempos de respuesta</strong> que acordamos como equipo.</p>
+
+    <div class="escal-flow">
+      <div class="escal-step">
+        <div class="escal-level">Nivel 1 · Operativo</div>
+        <div class="escal-who">
+          <strong>Líderes de turno · Sort, FM, LM</strong><br>
+          Resolución en piso. Sin escalamiento si se contiene.
+        </div>
+      </div>
+      <div class="escal-step">
+        <div class="escal-level">Nivel 2 · Táctico</div>
+        <div class="escal-who">
+          <strong>Owners por vertical</strong><br>
+          Felipe, Andrés, Jose Manuel, Manuel, Jorge.<br>
+          Decisiones de capacidad y reasignación.
+        </div>
+      </div>
+      <div class="escal-step">
+        <div class="escal-level">Nivel 3 · Estratégico</div>
+        <div class="escal-who">
+          <strong>Cross-funcional</strong><br>
+          Operaciones + Comercial + Tecnología.<br>
+          Impactos a SLA y comunicación a cliente.
+        </div>
+      </div>
+      <div class="escal-step">
+        <div class="escal-level">Nivel 4 · Directivo</div>
+        <div class="escal-who">
+          <strong>Equipo Directivo</strong><br>
+          Eventos que comprometan SLA masivo, costo extraordinario o reputación.
+        </div>
+      </div>
+    </div>
+
+    <div class="channel-grid">
+      <div class="channel">
+        <div class="channel-tag">Canal · Diario</div>
+        <div class="channel-name">Sala de Coordinación</div>
+        <div class="channel-detail">Grupo de WhatsApp dedicado. Stand-up 8:00 AM y 6:00 PM con todos los owners. Forecast vs real, OTD, alertas activas.</div>
+      </div>
+      <div class="channel">
+        <div class="channel-tag">Canal · Tiempo real</div>
+        <div class="channel-name">Tableros + Claude</div>
+        <div class="channel-detail">Volumen, OTD, lead time y costos. Single source of truth. Si no está en el tablero, no existe.</div>
+      </div>
+      <div class="channel">
+        <div class="channel-tag">Canal · Crítico</div>
+        <div class="channel-name">Línea Directiva</div>
+        <div class="channel-detail">Grupo de WhatsApp 24/7 durante W22-W23. Solo nivel 4. Mensaje inicial: <em>qué pasó · impacto · qué decisión necesito</em>.</div>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details id="lecciones" class="section-collapsible">
+  <summary>
+    <div class="summary-num">Sección<strong>06</strong></div>
+    <div>
+      <div class="summary-title">Lecciones del peak <span class="hl-thin"><strong>2025</strong></span></div>
+      <div class="summary-meta">
+        <span class="summary-mini-pill neutral">7 lecciones · riesgos activos</span>
+      </div>
+    </div>
+    <div class="summary-chevron">⌄</div>
+  </summary>
+  <div class="section-body">
+    <p class="section-lede" style="margin-top:0;margin-bottom:48px">Lo que aprendimos juntos el año pasado. <strong>Cada lección es un riesgo activo</strong> que el plan de este año cierra.</p>
+
+    <div class="lessons-grid">
+      <div class="lesson"><div class="lesson-num">01</div><div class="lesson-text">Mala planeación de capacidad de procesamiento en Sort Center</div></div>
+      <div class="lesson"><div class="lesson-num">02</div><div class="lesson-text">Mala comunicación con los clientes sobre los ajustes de ETAs por cap management</div></div>
+      <div class="lesson"><div class="lesson-num">03</div><div class="lesson-text">Lenta reacción por visibilidad en Looker</div></div>
+      <div class="lesson"><div class="lesson-num">04</div><div class="lesson-text">Falta de confianza en los datos</div></div>
+      <div class="lesson"><div class="lesson-num">05</div><div class="lesson-text">Despriorización de los proveedores en última milla</div></div>
+      <div class="lesson"><div class="lesson-num">06</div><div class="lesson-text">Altos costos por cesión de flota a TM, y lenta recuperación de las unidades</div></div>
+      <div class="lesson"><div class="lesson-num">07</div><div class="lesson-text">Tarde en REQ de activos y compras</div></div>
+    </div>
+  </div>
+</details>
+
+<div class="closing-banner">
+  <div class="closing-banner-inner">
+    <div class="tag">— Equipo 99 minutos —</div>
+    <h2>Vamos <strong>juntos</strong> a esta temporada.<br>Un equipo, un plan, un solo objetivo.</h2>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span>99 minutos · Hot Sale 2026</span>
+    <span>Sesión de Alineación · Confidencial</span>
+  </div>
+</footer>
+
+<script>
+const ctx = document.getElementById('forecastChart').getContext('2d');
+
+const weeks = ['W13','W14','W15','W16','W17','W18','W19','W20','W21','W22','W23','W24'];
+const real  = [119146, 92123, 139686, 137618, 156846, 115636, null, null, null, null, null, null];
+const fcst  = [null, null, null, null, null, null, 133561, 143577, 161724, 179272, 166876, 168140];
+
+const ink = '#0a0a0a';
+const gray = '#a3a3a3';
+const accent = '#85c440';
+const muted = '#737373';
+
+// Custom plugin: draw a frame around Hot Sale weeks (W22, W23)
+const hotSaleFramePlugin = {
+  id: 'hotSaleFrame',
+  beforeDatasetsDraw(chart) {
+    const {ctx, chartArea, scales} = chart;
+    const xScale = scales.x;
+    // W22 is index 9, W23 is index 10
+    const w22 = xScale.getPixelForValue(9);
+    const w23 = xScale.getPixelForValue(10);
+    // Calculate frame bounds with padding
+    const barWidth = (xScale.getPixelForValue(1) - xScale.getPixelForValue(0));
+    const left = w22 - barWidth/2 - 4;
+    const right = w23 + barWidth/2 + 4;
+    const top = chartArea.top + 4;
+    const bottom = chartArea.bottom - 1;
+
+    ctx.save();
+    // Soft accent fill
+    ctx.fillStyle = 'rgba(133,196,64,0.08)';
+    ctx.fillRect(left, top, right - left, bottom - top);
+    // Frame stroke
+    ctx.strokeStyle = accent;
+    ctx.lineWidth = 2;
+    ctx.strokeRect(left, top, right - left, bottom - top);
+    // Label "HOT SALE" at top of frame
+    ctx.fillStyle = accent;
+    ctx.font = '600 10px Barlow Condensed, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    // Background pill for label
+    const labelText = 'HOT SALE';
+    const labelWidth = ctx.measureText(labelText).width + 14;
+    const labelX = left + (right - left)/2;
+    const labelY = top;
+    ctx.fillStyle = accent;
+    ctx.fillRect(labelX - labelWidth/2, labelY - 9, labelWidth, 16);
+    ctx.fillStyle = '#0a0a0a';
+    ctx.fillText(labelText, labelX, labelY);
+    ctx.restore();
+  }
+};
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: weeks,
+    datasets: [
+      {
+        label: 'Real',
+        data: real,
+        backgroundColor: gray,
+        borderRadius: 0,
+        barPercentage: 0.7,
+        categoryPercentage: 0.85
+      },
+      {
+        label: 'Forecast',
+        data: fcst,
+        backgroundColor: ink,
+        borderRadius: 0,
+        barPercentage: 0.7,
+        categoryPercentage: 0.85
+      }
+    ]
+  },
+  plugins: [hotSaleFramePlugin],
+  options: {
+    responsive:true,
+    maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{
+        backgroundColor:ink,
+        titleFont:{family:'Barlow',size:12,weight:'600'},
+        bodyFont:{family:'Barlow',size:13},
+        padding:14,
+        borderColor:accent,
+        borderWidth:1,
+        callbacks:{
+          label:function(ctx){
+            if(ctx.parsed.y === null) return null;
+            return ctx.dataset.label + ': ' + ctx.parsed.y.toLocaleString() + ' paq';
+          }
+        }
+      }
+    },
+    scales:{
+      x:{
+        grid:{display:false},
+        border:{color:ink,width:1.5},
+        ticks:{color:muted,font:{family:'Barlow Condensed',size:12,weight:'500'}}
+      },
+      y:{
+        grid:{color:'rgba(10,10,10,.06)',drawBorder:false},
+        border:{display:false},
+        ticks:{color:muted,font:{family:'JetBrains Mono',size:10},callback:function(v){return (v/1000)+'K'}}
+      }
+    },
+    animation:{duration:1200,easing:'easeOutQuart'}
+  }
+});
+</script>
+</body>
+</html>
