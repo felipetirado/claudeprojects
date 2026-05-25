@@ -521,6 +521,10 @@
     content:"";width:8px;height:8px;border-radius:50%;
     background:var(--warn);
   }
+  .pending-pill.complete{
+    background:var(--accent-soft);color:var(--accent-deep);
+  }
+  .pending-pill.complete::before{background:var(--accent)}
 
   /* ACTION ITEMS section (replaces specific-tasks layout) */
   .action-grid{
@@ -693,7 +697,7 @@
     <div>
       <div class="hero-eyebrow">
         <span class="pip"></span>
-        Sesión de Alineación · Hot Sale 2026
+        Hot Sale 2026 · En operación
       </div>
       <h1>Plan de<br><span class="hl"><strong>Hot&nbsp;Sale</strong></span><br>2026</h1>
     </div>
@@ -703,10 +707,10 @@
         <span class="hero-meta-value"><strong>25 mayo 2026</strong> · W22</span>
       </div>
       <div class="hero-meta-row countdown-row">
-        <span class="hero-meta-label">Countdown</span>
+        <span class="hero-meta-label">Estatus</span>
         <span class="countdown-value">
-          <span class="countdown-num">5</span>
-          <span class="countdown-label">días para Hot Sale</span>
+          <span class="countdown-num" style="font-size:32px">En curso</span>
+          <span class="countdown-label">Hot Sale activo · W22</span>
         </span>
       </div>
       <div class="hero-meta-row">
@@ -936,7 +940,7 @@
     <div>
       <div class="summary-title">Alineaciones entre <span class="hl-thin"><strong>equipos</strong></span></div>
       <div class="summary-meta">
-        <span class="summary-mini-pill warn">Dependencias por cerrar</span>
+        <span class="summary-mini-pill ok">Compromisos cerrados</span>
         <span class="summary-mini-pill neutral">Comercial · Tech · Ops · Finanzas</span>
       </div>
     </div>
@@ -995,15 +999,15 @@
     <div>
       <div class="summary-title">Plan de <span class="hl-thin"><strong>Operaciones</strong></span></div>
       <div class="summary-meta">
-        <span class="summary-mini-pill warn">3 en proceso</span>
-        <span class="summary-mini-pill ok">18 listas</span>
+        <span class="summary-mini-pill ok">21 listas</span>
+        <span class="summary-mini-pill ok">100% completo</span>
         <span class="summary-mini-pill neutral">Presenta · cada owner</span>
       </div>
     </div>
     <div class="summary-chevron">⌄</div>
   </summary>
   <div class="section-body">
-    <p class="section-lede" style="margin-top:0;margin-bottom:48px">Ocho verticales coordinadas con tres focos comunes: <strong>definir capacidad, confirmarla y documentar escenarios de riesgo</strong>. <strong>Quedan 3 confirmaciones de capacidad pendientes</strong> — First Mile, Middle Mile y Last Mile.</p>
+    <p class="section-lede" style="margin-top:0;margin-bottom:48px">Ocho verticales coordinadas con tres focos comunes: <strong>definir capacidad, confirmarla y documentar escenarios de riesgo</strong>. <strong>El plan está completo</strong> — la operación entra en ejecución.</p>
 
   <div class="matrix-wrap">
     <table class="matrix">
@@ -1030,8 +1034,8 @@
           </td>
           <td>
             <div class="status-cell">
-              <div class="status-dot progress"></div>
-              <div class="status-text progress">En proceso</div>
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
               <div class="note">Flota propia + proveedor foráneo</div>
             </div>
           </td>
@@ -1108,8 +1112,8 @@
           </td>
           <td>
             <div class="status-cell">
-              <div class="status-dot progress"></div>
-              <div class="status-text progress">En proceso</div>
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
               <div class="note">Base y proveedor</div>
             </div>
           </td>
@@ -1134,8 +1138,8 @@
           </td>
           <td>
             <div class="status-cell">
-              <div class="status-dot progress"></div>
-              <div class="status-text progress">En proceso</div>
+              <div class="status-dot done"></div>
+              <div class="status-text done">Listo</div>
             </div>
           </td>
           <td>
@@ -1202,7 +1206,7 @@
 
   <div class="matrix-legend">
     <span><span class="dot done"></span>Listo</span>
-    <span><span class="dot progress"></span>En proceso</span>
+    <span><span class="dot done"></span>En proceso</span>
     <span><span class="dot empty"></span>No aplica</span>
   </div>
 
@@ -1214,7 +1218,7 @@
         <h3 style="font-family:'Barlow',sans-serif;font-weight:300;font-size:36px;line-height:1;letter-spacing:-.025em">Action Items <strong>adicionales</strong></h3>
         <p style="font-family:'Barlow',sans-serif;font-weight:400;font-size:15px;line-height:1.5;color:var(--gray-600);margin-top:14px;max-width:680px">Actividades transversales con dueño nombrado. Cada owner presenta su action item en sesión.</p>
       </div>
-      <div class="pending-pill">4 pendientes · 7 listos</div>
+      <div class="pending-pill complete">11 listos · 0 pendientes</div>
     </div>
 
     <div class="action-grid">
@@ -1269,13 +1273,13 @@
         </div>
       </div>
 
-      <div class="action-item progress">
+      <div class="action-item done">
         <div class="action-area-tag">Last Mile</div>
         <div class="action-task">Agendar visitas a operaciones principales</div>
         <div class="action-owner">Manuel A. López</div>
         <div class="action-status">
-          <div class="dot progress"></div>
-          <div class="label progress">En proceso</div>
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
         </div>
       </div>
 
@@ -1289,33 +1293,33 @@
         </div>
       </div>
 
-      <div class="action-item progress">
+      <div class="action-item done">
         <div class="action-area-tag">Finanzas</div>
         <div class="action-task">Establecer visibilidad diaria financiera</div>
         <div class="action-owner">Joel Gallegos</div>
         <div class="action-status">
-          <div class="dot progress"></div>
-          <div class="label progress">En proceso</div>
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
         </div>
       </div>
 
-      <div class="action-item progress">
+      <div class="action-item done">
         <div class="action-area-tag">Finanzas</div>
         <div class="action-task">Abastecer RQs en tiempo para Hot Sale</div>
         <div class="action-owner">Paulina Martínez Zavala</div>
         <div class="action-status">
-          <div class="dot progress"></div>
-          <div class="label progress">En proceso</div>
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
         </div>
       </div>
 
-      <div class="action-item progress">
+      <div class="action-item done">
         <div class="action-area-tag">Operaciones</div>
         <div class="action-task">Actualizar matriz de escalamiento de UTR y LM</div>
         <div class="action-owner">Andrés Mariluz · Manuel A. López</div>
         <div class="action-status">
-          <div class="dot progress"></div>
-          <div class="label progress">En proceso</div>
+          <div class="dot done"></div>
+          <div class="label done">Listo</div>
         </div>
       </div>
 
